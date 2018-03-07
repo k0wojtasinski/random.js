@@ -1,0 +1,26 @@
+{
+  "name": "random.js",
+  "version": "0.0.1",
+  "description": "Very simple pseudo-random generator library inspired by python random module",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k0wojtasinski/random.js.git"
+  },
+  "keywords": [
+    "random",
+    "generator"
+  ],
+  "author": "k0wojtasinski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k0wojtasinski/random.js/issues"
+  },
+  "homepage": "https://github.com/k0wojtasinski/random.js#readme",
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
+}
