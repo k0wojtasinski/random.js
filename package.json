@@ -4,7 +4,7 @@
   "description": "Very simple pseudo-random generator library inspired by python random module",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "node ./test.js"
   },
   "repository": {
     "type": "git",

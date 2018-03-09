@@ -15,7 +15,7 @@ function checkIfArray(name, arg) {
 }
 
 module.exports = {
-	random: function random() {
+	random: function() {
 		return Math.random();
 	},
 
@@ -71,5 +71,48 @@ module.exports = {
 			[array[i], array[j]] = [array[j], array[i]];
 		}
 		return array;
+	},
+
+	randbool: function() {
+		if (Math.random() > 0.5) return true;
+		else return false;
+	},
+
+	randascii: function() {
+		let randomCharCode = Math.floor((Math.random() * 127) + 31);
+		return String.fromCharCode(randomCharCode);
+	},
+
+	randcolor: function(hashSign=true) {
+		let randomNumber = Math.floor((Math.random() * 16777215));
+		if (hashSign) return "#" + randomNumber;
+		else return randomNumber;
+	},
+
+	randposition: function() {
+		const positions = ["top", "bottom", "left", "right", "center"];
+		return positions[Math.floor(Math.random() * 5)];
+	},
+
+	randbin: function(min, max) {
+		checkIfIntegers("randbin()", min, max);
+		if (min > max) [min, max] = [max, min];
+		let randomNumber = Math.floor((Math.random() * max) + min);
+		return randomNumber.toString(2);
+	},
+
+	randoct: function(min, max) {
+		checkIfIntegers("randoct()", min, max);
+		if (min > max) [min, max] = [max, min];
+		let randomNumber = Math.floor((Math.random() * max) + min);
+		return randomNumber.toString(8);
+	},
+
+	randhex: function(min, max, hashSign=true){
+		checkIfIntegers("randhex()", min, max);
+		if (min > max) [min, max] = [max, min];
+		let randomNumber = Math.floor((Math.random() * max) + min);
+		if (hashSign) return "#" + randomNumber.toString(16);
+		else return randomNumber.toString(16);
 	}
 };
